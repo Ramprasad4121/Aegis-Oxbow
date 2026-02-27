@@ -1,0 +1,28 @@
+# Node
+node_modules/
+dist/
+.next/
+out/
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Hardhat
+cache/
+artifacts/
+typechain-types/
+deployments.json
+deployment.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+.dockerignore

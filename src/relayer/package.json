@@ -1,0 +1,33 @@
+{
+  "name": "aegis-oxbow-relayer",
+  "version": "1.0.0",
+  "description": "AI-powered gas relayer for Aegis-Oxbow — BNB Chain hackathon",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "ethers": "^6.16.0",
+    "express": "^4.22.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.25",
+    "@types/node": "^20.19.35",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "keywords": [
+    "bnbchain",
+    "relayer",
+    "paymaster",
+    "ai",
+    "batching"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,61 @@
+version: "3.9"
+
+services:
+  # ─────────────────────────────────────────────────
+  # Relayer — AI Batching Agent
+  # ─────────────────────────────────────────────────
+  relayer:
+    build:
+      context: ./src/relayer
+      dockerfile: Dockerfile
+    container_name: aegis-relayer
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+      PORT: "4000"
+      CORS_ORIGIN: "http://localhost:3000"
+    ports:
+      - "4000:4000"
+    networks:
+      - aegis-net
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:4000/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  # ─────────────────────────────────────────────────
+  # Frontend — Next.js
+  # ─────────────────────────────────────────────────
+  frontend:
+    build:
+      context: ./src/frontend
+      dockerfile: Dockerfile
+    container_name: aegis-frontend
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+      NEXT_PUBLIC_RELAYER_URL: "http://localhost:4000"
+    ports:
+      - "3000:3000"
+    depends_on:
+      relayer:
+        condition: service_healthy
+    networks:
+      - aegis-net
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 25s
+
+networks:
+  aegis-net:
+    driver: bridge

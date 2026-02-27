@@ -1,0 +1,28 @@
+{
+  "name": "aegis-oxbow-contracts",
+  "version": "1.0.0",
+  "description": "AegisVault smart contracts for the Aegis-Oxbow privacy relayer",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "test:gas": "REPORT_GAS=true hardhat test",
+    "deploy:local": "hardhat run scripts/deploy.ts --network hardhat",
+    "deploy:bsc-testnet": "hardhat run scripts/deploy.ts --network bscTestnet",
+    "deploy:opbnb-testnet": "hardhat run scripts/deploy.ts --network opBNBTestnet",
+    "clean": "hardhat clean"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.1.2",
+    "@openzeppelin/contracts": "^5.0.2",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.0"
+  },
+  "keywords": [
+    "bnbchain",
+    "solidity",
+    "privacy",
+    "relayer",
+    "paymaster"
+  ],
+  "license": "MIT"
+}
