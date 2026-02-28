@@ -14,7 +14,7 @@ Compression: It batches these intents into a single Super-Transaction.
 
 Execution: It submits the bundle to the network, utilizing only a fraction of the blockspace required for 100 individual calls.
 
-> **📖 Read the Official Guide:** For a complete, step-by-step overview of how Aegis-Oxbow works and why it was built, please [read our official documentation](documentation.md).
+> **Read the Official Guide:** For a complete, step-by-step overview of how Aegis-Oxbow works and why it was built, please [read our official documentation](documentation.md).
 
 ##  The 20,000+ TPS Vision
 The BNB Chain 2026 Tech Roadmap targets **20,000+ TPS** and **sub-second finality**. However, standard privacy protocols (like Tornado Cash forks) process complex, gas-heavy cryptographic proofs one transaction at a time. This clogs the network, spikes gas fees, and physically prevents the chain from scaling. 
@@ -67,6 +67,35 @@ sequenceDiagram
     Vault->>Receiver: Distributes BNB securely to unlinked wallets
     UI->>User: Displays Anonymous Tx Receipt & Success State
 ```
+
+##  User Journey
+
+Aegis-Oxbow abstracts complex cryptography into a simple, three-step process for the end-user:
+
+1. **Connect & Specify:** The user connects their primary (public) wallet to the Aegis-Oxbow UI. They input the amount of BNB they wish to transfer and provide a completely fresh, unlinked destination address.
+2. **Deposit & Intent Creation:** The user signs a standard transaction to deposit the BNB into the `AegisVault` smart contract. This securely locks their funds and registers their off-chain "intent" with the AI Relayer.
+3. **Automated Settlement:** The user can now safely disconnect. The off-chain AI Relayer waits for the intent pool to fill (or hits a 15-second fallback timer). It predicts the lowest gas block, sponsors the execution fee, and distributes the batch. The user's fresh wallet receives the funds with zero on-chain link to their original identity.
+
+---
+
+##  Open Source Dependencies
+
+Aegis-Oxbow is proudly built using the following core open-source technologies:
+
+### Frontend
+* **[Next.js](https://nextjs.org/)** (App Router) - Core React framework.
+* **[Wagmi](https://wagmi.sh/) & [viem](https://viem.sh/)** - React hooks and lightweight EVM primitives.
+* **[RainbowKit](https://www.rainbowkit.com/)** - Wallet connection UI.
+* **[TailwindCSS](https://tailwindcss.com/)** - Brutalist UI styling.
+
+### Backend (AI Relayer)
+* **[Node.js](https://nodejs.org/) & [TypeScript](https://www.typescriptlang.org/)** - Runtime and type safety.
+* **[Ethers.js (v6)](https://docs.ethers.org/v6/)** - Blockchain listener and transaction broadcasting.
+* **[brain.js](https://github.com/BrainJS/brain.js)** - Local neural network for base-fee prediction.
+
+### Smart Contracts
+* **[Foundry](https://getfoundry.sh/)** (Forge/Cast) - Ultra-fast smart contract compilation, testing, and deployment.
+* **[OpenZeppelin Contracts](https://www.openzeppelin.com/contracts)** - Industry-standard secure contract primitives.
 
 ---
 
