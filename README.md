@@ -3,6 +3,8 @@
 
 ![Aegis-Oxbow UI](https://raw.githubusercontent.com/Ramprasad4121/Aegis-Oxbow/main/docs/ui-preview.png)
 
+The Aegis-Oxbow is a specialized infrastructure research tool designed to bridge the gap between BNB Chain’s 2026 scalability goals and the technical reality of current transaction patterns. It provides the empirical data necessary to transition from sequential to concurrent execution and Gas price fee reduce optimization made possible with the project.
+
 > **📖 Read the Official Guide:** For a complete, step-by-step overview of how Aegis-Oxbow works and why it was built, please [read our official documentation](documentation.md).
 
 ##  The 20,000+ TPS Vision
