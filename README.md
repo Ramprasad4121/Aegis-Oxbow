@@ -1,10 +1,17 @@
-# 🛡️ Aegis-Oxbow: AI-Powered Privacy Relayer
+#  Aegis-Oxbow: AI-Powered Privacy Relayer
 **BNB Chain x YZi Labs Hackathon 2025/2026 Submission** **Track:** Privacy Solutions  
 
-![Aegis-Oxbow UI](https://raw.githubusercontent.com/Ramprasad4121/Aegis-Oxbow/main/docs/ui-preview.png)
+![Aegis-Oxbow UI](https://raw.githubusercontent.com/Ramprasad4121/Aegis-Oxbow/main/docs/ui-preview.png
 
-## ⚡ The 20,000+ TPS Vision
+##  The 20,000+ TPS Vision
 The BNB Chain 2026 Tech Roadmap targets **20,000+ TPS** and **sub-second finality**. However, standard privacy protocols (like Tornado Cash forks) process complex, gas-heavy cryptographic proofs one transaction at a time. This clogs the network, spikes gas fees, and physically prevents the chain from scaling. 
+
+##  Why This Matters for Everyday Users
+Standard crypto infrastructure is public by default and expensive to obfuscate. Aegis-Oxbow abstracts these complexities away for the normal user:
+
+* **The "Coffee Shop" Privacy Problem:** If you buy a coffee with crypto today, the barista can view your entire transaction history and net worth. Aegis-Oxbow lets users easily fund a fresh, disconnected "spending wallet" to protect their financial privacy in everyday life.
+* **The "Uber Pool" of Gas Fees:** Existing privacy tools require users to pay massive individual gas fees. By batching up to 100 intents into a single transaction, our AI Relayer splits the network fee, reducing the cost of privacy to fractions of a penny.
+* **Zero Technical Knowledge Required:** Normal users don't want to manage cryptographic withdrawal notes or manually calculate gas limits. With our UI, they simply enter an amount, paste a destination address, and click "Deposit." The AI agent handles the rest.
 
 **Aegis-Oxbow solves this at the infrastructure level.** Instead of forcing the blockchain to process 100 separate privacy transfers, Aegis-Oxbow utilizes an off-chain AI Relayer to pool user intents. It batches these intents and submits them to the network as a single **Super-Transaction**. 
 
@@ -12,14 +19,14 @@ By compressing blockspace usage by up to 90%, Aegis-Oxbow multiplies effective T
 
 ---
 
-## 🧠 Key Innovations
+##  Key Innovations
 1. **Intent-Based Batching:** Users sign an "intent" to move funds anonymously. The protocol bundles these intents, acting as an ultra-efficient "Privacy Bus" rather than 100 separate Ubers.
 2. **Local AI Gas Predictor (`brain.js`):** The Relayer runs a deterministic, local neural network that analyzes block-by-block base fees. It predicts the optimal millisecond to execute the batch, securing the absolute cheapest blockspace without relying on paid external APIs.
 3. **Account Abstraction (Paymaster):** The AI Relayer sponsors the gas for the final execution, ensuring the user's fresh destination wallet remains completely disconnected from the source wallet.
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ```mermaid
 sequenceDiagram
@@ -48,7 +55,7 @@ sequenceDiagram
 
 ---
 
-## � Live Deployments & Ecosystem Fit
+##  Live Deployments & Ecosystem Fit
 
 * **AegisVault (BSC Testnet Verified):** `0xa8e68C396aa2daB84fcc46647842E22b0dd392b4`
 * **Explorer Link:** `https://testnet.bscscan.com/address/0xa8e68C396aa2daB84fcc46647842E22b0dd392b4`
@@ -56,7 +63,7 @@ sequenceDiagram
 
 ---
 
-## 💻 Tech Stack
+##  Tech Stack
 
 * **Smart Contracts:** Solidity (v0.8.20), strictly built and tested with **Foundry**.
 * **Frontend:** Next.js (App Router), TailwindCSS (Brutalist Developer UI), Wagmi, RainbowKit.
@@ -65,7 +72,7 @@ sequenceDiagram
 
 ---
 
-## 🚀 Quick Start (Local Deployment)
+##  Quick Start (Local Deployment)
 
 Aegis-Oxbow is fully Dockerized for immediate evaluation.
 
@@ -99,7 +106,7 @@ docker-compose up --build
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```text
 /aegis-oxbow
@@ -114,7 +121,7 @@ docker-compose up --build
 
 ---
 
-## 📜 License
+##  License
 
 This project is licensed under the [MIT License](https://github.com/Ramprasad4121/Aegis-Oxbow/blob/main/LICENSE).
 Built for the BNB Chain x YZi Labs 2026 Hackathon.
