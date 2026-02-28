@@ -1,7 +1,7 @@
 #  Aegis-Oxbow: AI-Powered Privacy Relayer
 **BNB Chain x YZi Labs Hackathon 2025/2026 Submission** **Track:** Privacy Solutions  
 
-![Aegis-Oxbow UI](https://raw.githubusercontent.com/Ramprasad4121/Aegis-Oxbow/main/docs/ui-preview.png
+![Aegis-Oxbow UI](https://raw.githubusercontent.com/Ramprasad4121/Aegis-Oxbow/main/docs/ui-preview.png)
 
 ##  The 20,000+ TPS Vision
 The BNB Chain 2026 Tech Roadmap targets **20,000+ TPS** and **sub-second finality**. However, standard privacy protocols (like Tornado Cash forks) process complex, gas-heavy cryptographic proofs one transaction at a time. This clogs the network, spikes gas fees, and physically prevents the chain from scaling. 
