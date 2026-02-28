@@ -3,6 +3,8 @@
 
 ![Aegis-Oxbow UI](https://raw.githubusercontent.com/Ramprasad4121/Aegis-Oxbow/main/docs/ui-preview.png)
 
+> **📖 Read the Official Guide:** For a complete, step-by-step overview of how Aegis-Oxbow works and why it was built, please [read our official documentation](documentation.md).
+
 ##  The 20,000+ TPS Vision
 The BNB Chain 2026 Tech Roadmap targets **20,000+ TPS** and **sub-second finality**. However, standard privacy protocols (like Tornado Cash forks) process complex, gas-heavy cryptographic proofs one transaction at a time. This clogs the network, spikes gas fees, and physically prevents the chain from scaling. 
 
