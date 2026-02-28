@@ -5,6 +5,15 @@
 
 The Aegis-Oxbow is a specialized infrastructure research tool designed to bridge the gap between BNB Chain’s 2026 scalability goals and the technical reality of current transaction patterns. It provides the empirical data necessary to transition from sequential to concurrent execution and Gas price fee reduce optimization made possible with the project.
 
+# How project Aegis-Oxbow  Works: The "Super-Transaction"
+Aegis-Oxbow solves scalability at the infrastructure level. Instead of forcing the blockchain to process 100 separate privacy transfers, it utilizes an off-chain AI Relayer to pool user intents.
+
+Collection: The Relayer gathers individual "intents" (unsigned transaction requests).
+
+Compression: It batches these intents into a single Super-Transaction.
+
+Execution: It submits the bundle to the network, utilizing only a fraction of the blockspace required for 100 individual calls.
+
 > **📖 Read the Official Guide:** For a complete, step-by-step overview of how Aegis-Oxbow works and why it was built, please [read our official documentation](documentation.md).
 
 ##  The 20,000+ TPS Vision
@@ -20,8 +29,6 @@ Standard crypto infrastructure is public by default and expensive to obfuscate. 
 **Aegis-Oxbow solves this at the infrastructure level.** Instead of forcing the blockchain to process 100 separate privacy transfers, Aegis-Oxbow utilizes an off-chain AI Relayer to pool user intents. It batches these intents and submits them to the network as a single **Super-Transaction**. 
 
 By compressing blockspace usage by up to 90%, Aegis-Oxbow multiplies effective TPS and slashes individual gas costs, providing the exact middleware needed for BNB's next generation of scaling.
-
----
 
 ##  Key Innovations
 1. Intent-Based Batching
